@@ -3,17 +3,54 @@
 
   {% include head.html %}
 
+  <style>
+    html, body, section {
+      height: 100%;
+    }
+
+    section {
+      width: 75%;
+      max-width: 600px;
+      margin: auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .col {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .mail {
+      display: flex;
+      justify-content: flex-start;
+    }
+
+    hr {
+      width: 100%;
+    }
+  </style>
+
   <body>
 
-    {% include header.html %}
+    <section>
 
-    <main class="page-content" aria-label="Content">
-      <div class="wrapper">
-        {{ content }}
+      <div class="col">
+
+        <div class="header">
+          <h1> Hexcode </h1>
+          <h4> A podcast about technology and art. <i> Coming soon. </i> </h4>
+        </div>
+
+        <hr/>
+        <div class="mail">
+          {% include mailchimp.html %}
+        </div>
+
       </div>
-    </main>
-
-    {% include footer.html %}
+    </section>
 
   </body>
 
